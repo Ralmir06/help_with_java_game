@@ -1,10 +1,11 @@
 package java_game;
+
 import java.io.*;
 
 public class Programm1 {
 
     public static void main(String[] args) {
-        try(FileWriter writer = new FileWriter("LingvaBiblos.txt", false)) {
+        try (FileWriter writer = new FileWriter("LingvaBiblos.txt", false)) {
             // запись всей строки
             String text = "Perception";
             writer.write(text);
@@ -13,7 +14,7 @@ public class Programm1 {
             writer.append('E');
 
             writer.flush();
-        } catch(IOException ex){
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
