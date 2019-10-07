@@ -7,11 +7,14 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
-apply plugin: 'application'
+plugins {
+    id 'application'
+}
+apply plugin : 'java'
 
+//application {
 mainClassName = 'java_game.Main'
-
+//}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
