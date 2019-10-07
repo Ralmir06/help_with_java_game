@@ -24,6 +24,7 @@ class MyPanel extends JPanel {
         text1.getDocument().addDocumentListener(new MyListener());
     }
 
+    @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawString(s1, 33, 77);
