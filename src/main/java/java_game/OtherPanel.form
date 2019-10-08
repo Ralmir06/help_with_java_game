@@ -49,16 +49,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Save"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonHandle"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="loadButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Load"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loadButtonHandle"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="clearButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Clear"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearButtonHandle"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

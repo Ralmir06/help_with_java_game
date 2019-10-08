@@ -6,10 +6,10 @@ import java.awt.*;
 
 class MyFrame extends JFrame {
 
-    public MyFrame() {
+    public MyFrame(FileStorage storage) {
         setTitle("Main frame");
         setSize(300, 200);
-        MyPanel panel = new MyPanel();
+        OtherPanel panel = new OtherPanel(storage);
         Container pane = getContentPane();
         pane.add(panel);
     }

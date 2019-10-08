@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package java_game;
 
 /**
@@ -11,10 +6,13 @@ package java_game;
  */
 public class OtherPanel extends javax.swing.JPanel {
 
+    private final FileStorage storage;
+
     /**
      * Creates new form OtherPanel
      */
-    public OtherPanel() {
+    public OtherPanel(FileStorage storage) {
+        this.storage = storage;
         initComponents();
     }
 
@@ -43,16 +41,43 @@ public class OtherPanel extends javax.swing.JPanel {
         add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         saveButton.setText("Save");
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButtonHandle(evt);
+            }
+        });
         buttonsPanel.add(saveButton);
 
         loadButton.setText("Load");
+        loadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loadButtonHandle(evt);
+            }
+        });
         buttonsPanel.add(loadButton);
 
         clearButton.setText("Clear");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonHandle(evt);
+            }
+        });
         buttonsPanel.add(clearButton);
 
         add(buttonsPanel, java.awt.BorderLayout.PAGE_END);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void saveButtonHandle(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonHandle
+        storage.save(inputTextArea.getText());
+    }//GEN-LAST:event_saveButtonHandle
+
+    private void loadButtonHandle(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonHandle
+        inputTextArea.setText(storage.load());
+    }//GEN-LAST:event_loadButtonHandle
+
+    private void clearButtonHandle(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonHandle
+        inputTextArea.setText("");
+    }//GEN-LAST:event_clearButtonHandle
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
