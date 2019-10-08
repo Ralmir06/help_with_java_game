@@ -2,7 +2,7 @@ package java_game;
 
 import java.io.*;
 
-public class Programm1 {
+public class Program1 {
 
     public static void main(String[] args) {
         try (FileWriter writer = new FileWriter("LingvaBiblos.txt", false)) {
